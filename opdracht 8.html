@@ -13,20 +13,23 @@
         robotArm.loadLevel("exercise 9");
 
         // Jou instructies volgen hier
-        for (w = 0; w < 4; w++) {
-            
-            for (z = 0; z < 4; z++) {
-                robotArm.grab();
-                for (x = 0; x < 6; x++) {
-                    robotArm.moveRight();
-                }
-                robotArm.drop();
-                for (y = 0; y < 6; y++) {
-                    robotArm.moveLeft();
-                }
-            }
+       for( m = 0; m < 3; m++)
+             robotArm.moveRight();
+             var number = 4;
+            for( w = 0; w < 4; w++){
+            for( a = 0; a < number; a++){
+            robotArm.grab();
+            for( c = 0; c < 5; c++)
             robotArm.moveRight();
-        }
+                     robotArm.drop();
+                     for( c = 0; c < 5; c++)
+                         robotArm.moveLeft();
+                 }
+                robotArm.moveLeft();
+                number--;
+            }
+            
+        
 
         // De door jou opgegeven instructies uitvoeren
         robotArm.run();
